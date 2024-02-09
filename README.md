@@ -1,3 +1,5 @@
+This is version 1 which was written in the readme itself. 
+
 import java.util.*;
 public class calculator
 {
