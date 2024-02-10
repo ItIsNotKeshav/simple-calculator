@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="main-frame">
-        <div class="display" id="display"></div>
+        <div class="display" id="display">
+            <div id="user-input"></div>
+            <div id="output"></div>
+        </div>
         <div class="buttons">
             <div class="row">
                 <button class="btn dark" id="c" onclick="clearDisplay()"><span>C</span></button>
@@ -23,20 +26,20 @@
                 <button class="btn med" id="btn-multiply" onclick="addOperator('*')"><span>*</span></button>
             </div>
             <div class="row">
-                <button class="btn dark" id="btn" onclick="addNumber(4)"><span>4</span></button>
-                <button class="btn med" id="btn" onclick="addNumber(5)"><span>5</span></button>
-                <button class="btn light" id="btn" onclick="addNumber(6)"><span>6</span></button>
-                <button class="btn light" id="btn" onclick="addOperator('-')"><span>-</span></button>
+                <button class="btn dark" id="btn-4" onclick="addNumber(4)"><span>4</span></button>
+                <button class="btn med" id="btn-5" onclick="addNumber(5)"><span>5</span></button>
+                <button class="btn light" id="btn-6" onclick="addNumber(6)"><span>6</span></button>
+                <button class="btn light" id="btn-diff" onclick="addOperator('-')"><span>-</span></button>
             </div>
             <div class="row">
-                <button class="btn dark" id="btn" onclick="addNumber(1)"><span>1</span></button>
-                <button class="btn med" id="btn" onclick="addNumber(2)"><span>2</span></button>
-                <button class="btn light" id="btn" onclick="addNumber(3)"><span>3</span></button>
-                <button class="btn light" id="btn" onclick="addOperator('+')"><span>+</span></button>
+                <button class="btn dark" id="btn-1" onclick="addNumber(1)"><span>1</span></button>
+                <button class="btn med" id="btn-2" onclick="addNumber(2)"><span>2</span></button>
+                <button class="btn light" id="btn-3" onclick="addNumber(3)"><span>3</span></button>
+                <button class="btn light" id="btn-add" onclick="addOperator('+')"><span>+</span></button>
             </div>
             <div class="row">
-                <button class="btn dark" id="btn" onclick="addNumber(0)"><span>0</span></button>
-                <button class="btn med" id="btn" onclick="addOperator('.')"><span>.</span></button>
+                <button class="btn dark" id="btn-0" onclick="addNumber(0)"><span>0</span></button>
+                <button class="btn med" id="btn-fullstop" onclick="addOperator('.')"><span>.</span></button>
                 <button class="ent-btn" id="ent-btn" onclick="calculate()"><span>=</span></button>
             </div>
         </div>
