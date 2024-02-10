@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+
+
+.vast-shadow-regular {
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 .main-frame{
     width: 20vw;
-    height: 50vh;
+    height: 75vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,25 +24,26 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .display{
     width: 100%;
-    height: 10vh;
-    min-height: 8vh;
+    height: 7vw;
+    min-height: 5vw;
     display: flex;
     align-items: center;
     font-size: 2em;
-    padding: 0 20px;
     border: 5px solid #D3B9F3;
     border-radius: 24px;
+    box-sizing: border-box;
+    margin: 16px;
 }
 
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust spacing between buttons */
-    /* Add padding to the container */
+    display: grid;
     width: 100%;
 }
 
@@ -44,22 +54,153 @@ body{
 }
 
 .btn {
-    border-radius: 50%;
-    flex-grow: 1; /* Allow buttons to grow */
-    flex-basis: calc(25% - 20px); /* Calculate basis to occupy 25% of the container width with 20px spacing */
-    height: 65px;
+    border-radius: 48px;
+    width: 4vw; /* Calculate basis to occupy 25% of the container width with 20px spacing */
+    height: 4vw;
     border: none;
-    margin: 5px; /* Add margin for spacing */
+    margin:5px ; /* Add margin for spacing */
     display: flex;
     justify-content: center;
     align-items: center;
-     
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.btn:hover::before{
+    width: 500px;
+    height: 500px;
+}
+
+.dark{
+    background-color: #43147c;
+    color: #43147c;
+    transition: color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.dark::before{
+    content: '';
+    position: absolute;
+    top: var(--yPos);
+    left: var(--xPos);
+    width: 0;
+    height: 0;
+    transform:  translate(-50%, -50%);
+    background-color: #B62B5E;
+    color: #Fff;
+    transition: width 0.7s, height 0.7s;
+    border-radius: 50%;
+    z-index: 0;
+    
+}
+
+.med{
+    background-color: #873FDE;
+    color: #873FDE;
+    transition: color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.med::before{
+    content: '';
+    position: absolute;
+    top: var(--yPos);
+    left: var(--xPos);
+    width: 0;
+    height: 0;
+    transform:  translate(-50%, -50%);
+    background-color: #D4497C;
+    color: #F4F1F7;
+    transition: width 0.7s, height 0.7s;
+    border-radius: 50%;
+    z-index: 0;
+    
+}
+
+.light{
+    background-color: #A772E9;
+    color: #A772E9;
+    transition: color 0.3s ease;
+}
+
+.light::before{
+    content: '';
+    position: absolute;
+    top: var(--yPos);
+    left: var(--xPos);
+    width: 0;
+    height: 0;
+    transform:  translate(-50%, -50%);
+    background-color: #E07BA0;
+    color: #F4F1F7;
+    transition: width 0.7s, height 0.7s;
+    border-radius: 50%;
+    z-index: 0;
+    
+}
 
 .ent-btn{
     background-color: #D3B9F3;
-    color: #fef8f0;
+    color: #D3B9F3;
+    width: 9vw;
+    height: 4vw;
+    border: none;
+    margin:  5px 5px  5px 5px;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25em;
+    border-radius: 42px;
+    transition: color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
 
 
+.ent-btn:hover{
+    color: #F4F1F7;
+}
+.ent-btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.ent-btn:hover::before{
+    width: 500px;
+    height: 500px;
+}
+
+.ent-btn::before{
+    content: '';
+    position: absolute;
+    top: var(--yPos);
+    left: var(--xPos);
+    width: 0;
+    height: 0;
+    transform:  translate(-50%, -50%);
+    background-color: #E48BAC;
+    color: #F4F1F7;
+    transition: width 0.7s, height 0.7s;
+    border-radius: 50%;
+    z-index: 0;
+    
 }
