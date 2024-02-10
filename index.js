@@ -13,6 +13,10 @@ buttons.forEach((button) => {
 let displayValue = '';
 
 function addNumber(num) {
+  if (displayValue === "Error") {
+    displayValue = '';
+    updateDisplay();
+  }
   if (typeof displayValue === "number") {
     displayValue = '';
   }
@@ -40,15 +44,16 @@ function deleteLast() {
     updateDisplay();
 }
 
+
 function calculate() {
-    try {
-        displayValue = eval(displayValue);
-        maxVal();
-        updateDisplay();
-    } catch (error) {
-        displayValue = 'Error';
-        updateDisplay();
-    }
+  try {
+    displayValue = eval(displayValue);
+    maxVal();
+    updateDisplay();
+  } catch (error) {
+    displayValue = 'Error';
+    updateDisplay();
+  }
 }
 
 function maxVal() {
