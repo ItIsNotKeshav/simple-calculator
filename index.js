@@ -13,11 +13,14 @@ buttons.forEach((button) => {
 let displayValue = '';
 
 function addNumber(num) {
+  if (typeof displayValue === "number") {
+    displayValue = '';
+  }
   if (displayValue.length <= 16){
     displayValue += num;
     maxVal();
   }
-    updateDisplay();
+  updateDisplay();
 }
 
 function addOperator(operator) {
@@ -40,6 +43,7 @@ function deleteLast() {
 function calculate() {
     try {
         displayValue = eval(displayValue);
+        maxVal();
         updateDisplay();
     } catch (error) {
         displayValue = 'Error';
@@ -49,19 +53,27 @@ function calculate() {
 
 function maxVal() {
   var display = document.querySelector('.display');
-  if (displayValue.length > 14) {
-    display.style.fontSize = "16px";
-  } else if (displayValue.length > 12) {
-    display.style.fontSize = "20px";
+  displayValue = displayValue.toString();
+  if (displayValue.length >= 18) {
+    displayValue = displayValue.slice(0, 18);
+    display.style.fontSize = "1.1em";
   }
-  else if (displayValue.length > 10) {
-    display.style.fontSize = "24px";
+  else if(displayValue.length >= 16) {
+    display.style.fontSize = "1.15em";
   }
-  else if (displayValue.length > 8) {
-    display.style.fontSize = "28px";
+  else if (displayValue.length >= 14) {
+    display.style.fontSize = "1.20em";
+  } else if (displayValue.length >= 12) {
+    display.style.fontSize = "1.35em";
+  }
+  else if (displayValue.length >= 10) {
+    display.style.fontSize = "1.5em";
+  }
+  else if (displayValue.length >= 8) {
+    display.style.fontSize = "1.75em";
   }
   else {
-    display.style.fontSize = "36px"; // or whatever your default size is
+    display.style.fontSize = "2em"; 
   }
   updateDisplay();
 }
