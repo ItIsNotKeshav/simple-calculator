@@ -1,12 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-
-.vast-shadow-regular {
-    font-family: "Vast Shadow", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
+  
 .main-frame{
     width: 20vw;
     height: 75vw;
@@ -24,9 +18,9 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: "Vast Shadow", serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .display{
@@ -85,10 +79,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Vast Shadow", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25em;
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+    font-size: 1.5em;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -187,10 +181,10 @@ body{
     height: 4vw;
     border: none;
     margin:  5px 5px  5px 5px;
-    font-family: "Vast Shadow", serif;
-    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
     font-style: normal;
-    font-size: 1.25em;
+    font-size: 2em;
     border-radius: 42px;
     transition: color 0.3s ease;
     position: relative;

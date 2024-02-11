@@ -28,7 +28,13 @@ function addNumber(num) {
 }
 
 function addOperator(operator) {
-    displayValue += operator;
+
+    if (displayValue === "Error") {
+      displayValue = '';
+      updateDisplay();
+    }
+    
+   displayValue += operator;
     updateDisplay();
 }
 
