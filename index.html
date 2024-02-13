@@ -1,49 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="main-frame">
-        <div class="display" id="display">
-            <div id="user-input"></div>
-            <div id="output"></div>
+      <div class="display" id="display">
+        <div id="user-input"></div>
+        <div id="output"></div>
+      </div>
+      <div class="buttons">
+        <div class="row">
+          <button class="btn dark" id="sqroot" onclick="changeTheme()">
+            <span></span>
+          </button>
+          <button class="btn dark" id="power" onclick="addOperator('^')">
+            <span>^</span>
+          </button>
+          <button class="btn dark" id="openbrac" onclick="addOperator('(')">
+            <span>(</span>
+          </button>
+          <button class="btn dark" id="closebrac" onclick="addOperator(')')">
+            <span>)</span>
+          </button>
         </div>
-        <div class="buttons">
-            <div class="row">
-                <button class="btn dark" id="c" onclick="clearDisplay()"><span>C</span></button>
-                <button class="btn dark" id="del" onclick="deleteLast()"><span>del</span></button>
-                <button class="btn dark" id="perc" onclick="addOperator('%')"><span>%</span></button>
-                <button class="btn dark" id="divide" onclick="addOperator('/')"><span>/</span></button>
-            </div>
-            <div class="row">
-                <button class="btn dark" id="btn-7" onclick="addNumber(7)"><span>7</span></button>
-                <button class="btn med" id="btn-8" onclick="addNumber(8)"><span>8</span></button>
-                <button class="btn med" id="btn-9" onclick="addNumber(9)"><span>9</span></button>
-                <button class="btn med" id="btn-multiply" onclick="addOperator('*')"><span>*</span></button>
-            </div>
-            <div class="row">
-                <button class="btn dark" id="btn-4" onclick="addNumber(4)"><span>4</span></button>
-                <button class="btn med" id="btn-5" onclick="addNumber(5)"><span>5</span></button>
-                <button class="btn light" id="btn-6" onclick="addNumber(6)"><span>6</span></button>
-                <button class="btn light" id="btn-diff" onclick="addOperator('-')"><span>-</span></button>
-            </div>
-            <div class="row">
-                <button class="btn dark" id="btn-1" onclick="addNumber(1)"><span>1</span></button>
-                <button class="btn med" id="btn-2" onclick="addNumber(2)"><span>2</span></button>
-                <button class="btn light" id="btn-3" onclick="addNumber(3)"><span>3</span></button>
-                <button class="btn light" id="btn-add" onclick="addOperator('+')"><span>+</span></button>
-            </div>
-            <div class="row">
-                <button class="btn dark" id="btn-0" onclick="addNumber(0)"><span>0</span></button>
-                <button class="btn med" id="btn-fullstop" onclick="addOperator('.')"><span>.</span></button>
-                <button class="ent-btn" id="ent-btn" onclick="calculate()"><span>=</span></button>
-            </div>
+        <div class="row">
+          <button class="btn dark" id="c" onclick="clearDisplay()">
+            <span>C</span>
+          </button>
+          <button class="btn med" id="del" onclick="deleteLast()">
+            <span>del</span>
+          </button>
+          <button class="btn med" id="perc" onclick="addOperator('%')">
+            <span>%</span>
+          </button>
+          <button class="btn med" id="divide" onclick="addOperator('/')">
+            <span>/</span>
+          </button>
         </div>
+        <div class="row">
+          <button class="btn dark" id="btn-7" onclick="addNumber(7)">
+            <span>7</span>
+          </button>
+          <button class="btn med" id="btn-8" onclick="addNumber(8)">
+            <span>8</span>
+          </button>
+          <button class="btn light" id="btn-9" onclick="addNumber(9)">
+            <span>9</span>
+          </button>
+          <button class="btn light" id="btn-multiply" onclick="addOperator('*')">
+            <span>*</span>
+          </button>
+        </div>
+        <div class="row">
+          <button class="btn dark" id="btn-4" onclick="addNumber(4)">
+            <span>4</span>
+          </button>
+          <button class="btn med" id="btn-5" onclick="addNumber(5)">
+            <span>5</span>
+          </button>
+          <button class="btn light" id="btn-6" onclick="addNumber(6)">
+            <span>6</span>
+          </button>
+          <button class="btn light" id="btn-diff" onclick="addOperator('-')">
+            <span>-</span>
+          </button>
+        </div>
+        <div class="row">
+          <button class="btn dark" id="btn-1" onclick="addNumber(1)">
+            <span>1</span>
+          </button>
+          <button class="btn med" id="btn-2" onclick="addNumber(2)">
+            <span>2</span>
+          </button>
+          <button class="btn light" id="btn-3" onclick="addNumber(3)">
+            <span>3</span>
+          </button>
+          <button class="btn light" id="btn-add" onclick="addOperator('+')">
+            <span>+</span>
+          </button>
+        </div>
+        <div class="row">
+          <button class="btn dark" id="btn-0" onclick="addNumber(0)">
+            <span>0</span>
+          </button>
+          <button class="btn med" id="btn-fullstop" onclick="addOperator('.')">
+            <span>.</span>
+          </button>
+          <button class="ent-btn" id="ent-btn" onclick="calculate()">
+            <span>=</span>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
