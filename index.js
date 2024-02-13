@@ -82,19 +82,8 @@ function updateDisplay() {
 
 
 function bracketcheck() {
-  for (let i = 0; i < displayValue.length; i++) {
-    if (displayValue[i] === '(') {
-        if (i > 0 && (isNumber(displayValue[i - 1]) || displayValue[i - 1] === ')')) {
-            displayValue = insert(displayValue, i, '*');
-            i++; // Skip the inserted '*'
-        }
-    } else if (displayValue[i] === ')') {
-        if (i < displayValue.length - 1 && (isNumber(displayValue[i + 1]) || displayValue[i + 1] === '(')) {
-            displayValue = insert(displayValue, i + 1, '*');
-            i++; // Skip the inserted '*'
-        }
-    }
-  }
+  displayValue = displayValue.replace(/\(/g, '*(');
+  displayValue = displayValue.replace(/\)/g, ')*');
 }
 
 function operatorend() {
