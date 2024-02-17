@@ -30,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 2em;
-  border: 5px solid #d3b9f3;
+  border: 5px solid;
   border-radius: 24px;
   box-sizing: border-box;
   margin: 16px;
@@ -39,26 +39,8 @@ body {
   justify-content: space-between;
   text-align: right;
   padding-left: 10px;
-  color: #323187;
 }
 
-#user-input {
-  font-size: 0.8em;
-  color: #888;
-  text-align: right;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 2em;
-}
-
-#output {
-  font-size: 2em;
-  color: #000;
-  text-align: right;
-  width: 100%;
-}
 
 .buttons {
   display: grid;
@@ -88,6 +70,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: #fff;
 }
 
 .btn span {
@@ -95,13 +78,11 @@ body {
   z-index: 1;
 }
 
-.btn:hover {
-  color: #fff;
-}
 
 .btn:hover::before {
   width: 500px;
   height: 500px;
+  
 }
 
 .btn:active{
@@ -109,16 +90,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.dark {
-  background-color: #43147c;
-  color: #fff;
-  transition: color 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.dark::before {
+.btn::before {
   content: "";
   position: absolute;
   top: var(--yPos);
@@ -126,61 +98,14 @@ body {
   width: 0;
   height: 0;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, .15);
-  color: #fff;
-  transition: width 0.5s, height 0.5s;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.med {
-  background-color: #873fde;
-  color: #873fde;
-  transition: color 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.med::before {
-  content: "";
-  position: absolute;
-  top: var(--yPos);
-  left: var(--xPos);
-  width: 0;
-  height: 0;
-  transform: translate(-50%, -50%);
-  background-color: #d4497c;
-  color: #f4f1f7;
-  transition: width 0.5s, height 0.5s;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.light {
-  background-color: #a772e9;
-  color: #a772e9;
-  transition: color 0.3s ease;
-}
-
-.light::before {
-  content: "";
-  position: absolute;
-  top: var(--yPos);
-  left: var(--xPos);
-  width: 0;
-  height: 0;
-  transform: translate(-50%, -50%);
-  background-color: #e07ba0;
-  color: #f4f1f7;
+  background-color: rgba(255, 255, 255, 0.15);
   transition: width 0.5s, height 0.5s;
   border-radius: 50%;
   z-index: 0;
 }
 
 .ent-btn {
-  background-color: #d3b9f3;
-  color: #d3b9f3;
+  color: #fff;
   width: 9vw;
   height: 4vw;
   border: none;
@@ -196,9 +121,8 @@ body {
   cursor: pointer;
 }
 
-.ent-btn:hover {
-  color: #f4f1f7;
-}
+
+
 .ent-btn span {
   position: relative;
   z-index: 1;
@@ -217,8 +141,7 @@ body {
   width: 0;
   height: 0;
   transform: translate(-50%, -50%);
-  background-color: #e48bac;
-  color: #f4f1f7;
+  background-color: rgba(255, 255, 255, 0.15);
   transition: width 0.5s, height 0.5s;
   border-radius: 50%;
   z-index: 0;
