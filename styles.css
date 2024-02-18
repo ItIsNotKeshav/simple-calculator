@@ -229,3 +229,31 @@ body {
     font-size: 2.5em;
   }
 }
+
+
+@media screen and (max-height: 600px) {
+  .main-frame {
+    flex-direction: row;
+    width: 100vw;
+    height: 90vh;
+  }
+  .display {
+    width: 40%;
+    height: auto;
+  }
+  .buttons {
+    width: 50%;
+    height: 100%;
+  }
+  .btn {
+    width: 10vw;
+    height: 10vw;
+    font-size: 2em;
+  }
+  .ent-btn {
+    width: 24vw;
+    height: 10vw;
+    font-size: 2.5em;/* Adjust according to your needs */
+  }
+}
+
