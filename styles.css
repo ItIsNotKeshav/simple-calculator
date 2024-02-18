@@ -20,7 +20,7 @@ body {
   font-weight: 500;
   font-style: normal;
   overflow: hidden;
-  transition: background-color 0.5s ease; 
+  transition: background-color 0.5s ease;
 }
 
 .display {
@@ -40,7 +40,6 @@ body {
   text-align: right;
   padding-left: 10px;
 }
-
 
 .buttons {
   display: grid;
@@ -78,14 +77,12 @@ body {
   z-index: 1;
 }
 
-
 .btn:hover::before {
   width: 500px;
   height: 500px;
-  
 }
 
-.btn:active{
+.btn:active {
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
@@ -121,8 +118,6 @@ body {
   cursor: pointer;
 }
 
-
-
 .ent-btn span {
   position: relative;
   z-index: 1;
@@ -145,4 +140,92 @@ body {
   transition: width 0.5s, height 0.5s;
   border-radius: 50%;
   z-index: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-frame {
+    width: 30vw;
+    height: 150vw;
+  }
+  .display {
+    height: 10vw;
+    min-height: 7vw;
+    font-size: 3em;
+  }
+  .btn {
+    width: 6vw;
+    height: 6vw;
+    font-size: 1.5em;
+  }
+  .ent-btn {
+    width: 14vw;
+    height: 6vw;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-frame {
+    width: 40vw;
+    height: 200vw;
+  }
+  .display {
+    height: 14vw;
+    min-height: 10vw;
+    font-size: 4em;
+  }
+  .btn {
+    width: 8vw;
+    height: 8vw;
+    font-size: 1.5em;
+  }
+  .ent-btn {
+    width: 18vw;
+    height: 8vw;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main-frame {
+    width: 80vw;
+    height: 400vw;
+  }
+  .display {
+    height: 28vw;
+    min-height: 20vw;
+    font-size: 12em;
+  }
+  .btn {
+    width: 16vw;
+    height: 16vw;
+    font-size: 2em;
+  }
+  .ent-btn {
+    width: 36vw;
+    height: 16vw;
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .main-frame {
+    width: 90vw;
+    height: 450vw;
+  }
+  .display {
+    height: 32vw;
+    min-height: 24vw;
+    font-size: 14em;
+  }
+  .btn {
+    width: 18vw;
+    height: 18vw;
+    font-size: 2em;
+  }
+  .ent-btn {
+    width: 40vw;
+    height: 18vw;
+    font-size: 2.5em;
+  }
 }
